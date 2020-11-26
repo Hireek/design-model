@@ -11,19 +11,20 @@ import java.util.Set;
 public class StrategyFactory {
 
 
-    private static Map<String,IMessageFactory> messages = new HashMap<>();
+    private static Map<String, IMessageFactory> messages = new HashMap<>();
 
     static {
 
-        messages.put(MessageEnum.PRE_DEAL.getKey(),new PrePaymentFactory());
-        messages.put(MessageEnum.PRE_FINAL_PAYMENT.getKey(),new PreFinalFactory());
+        messages.put(MessageEnum.PRE_DEAL.getKey(), new PrePaymentFactory());
+        messages.put(MessageEnum.PRE_FINAL_PAYMENT.getKey(), new PreFinalFactory());
     }
 
-    private StrategyFactory() {}
+    private StrategyFactory() {
+    }
 
     public static IMessageFactory getMessageImpl(String messageType) {
 
-        IMessageFactory  messageFactory = messages.get(messageType);
+        IMessageFactory messageFactory = messages.get(messageType);
 
         if (null == messageFactory) {
 
