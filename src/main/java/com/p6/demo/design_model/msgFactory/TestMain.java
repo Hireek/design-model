@@ -43,6 +43,17 @@ public class TestMain {
         System.out.println(product.preMessageDB());
 
 
+        System.out.println("下面是策略模式的优化");
+        System.out.println();
+        // 加入策略的优化
+        IMessageFactory pre_deal = StrategyFactory.getMessageImpl("pre_deal");
+
+        IMessage iMessage2 = pre_deal.factoryMid();
+
+        System.out.println(iMessage2.preMessageDB());
+        System.out.println(iMessage2.preMessageMsg());
+        System.out.println(iMessage2.title());
+
 
 
     }
