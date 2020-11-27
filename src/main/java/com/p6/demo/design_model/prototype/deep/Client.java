@@ -1,4 +1,4 @@
-package com.p6.demo.design_model.prototype.shallow;
+package com.p6.demo.design_model.prototype.deep;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class Client {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
 
         ConcretePrototype prototype = new ConcretePrototype();
 
@@ -25,7 +25,7 @@ public class Client {
 
 
         // 拷贝原型对象
-        ConcretePrototype cloneType = prototype.clone();
+        ConcretePrototype cloneType = prototype.deepClone();
 
         cloneType.getHobbits().add("托马斯");
 
