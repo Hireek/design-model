@@ -25,7 +25,7 @@ public class InterruptDemo2 implements Runnable {
                 e.printStackTrace();
                 // 可以不做处理
                 // 继续中断
-//                Thread.currentThread().interrupt();
+                Thread.currentThread().interrupt();
                 // 抛出异常
             }
         }
@@ -39,7 +39,7 @@ public class InterruptDemo2 implements Runnable {
         Thread thread = new Thread(new InterruptDemo2(), "这是我的小t线程");
 
         thread.start();
-//        Thread.sleep(1000);
+        Thread.sleep(1000);
         thread.interrupt();// 有作用
 
     }
