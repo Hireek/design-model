@@ -1,7 +1,11 @@
 package com.p6.demo;
 
+import com.p6.demo.current.listbean.DemoFactory;
+import com.p6.demo.current.listbean.DemoNameEnum;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import javax.annotation.Resource;
 
 @SpringBootTest
 class DemoApplicationTests {
@@ -10,4 +14,13 @@ class DemoApplicationTests {
     void contextLoads() {
     }
 
+    @Resource
+    private DemoFactory demoFactory;
+
+    @Test
+    void testBean() {
+        demoFactory.execute(0);
+        demoFactory.execute(DemoNameEnum.A.getCode());
+        demoFactory.execute(DemoNameEnum.B.getCode());
+    }
 }

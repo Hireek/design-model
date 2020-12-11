@@ -12,8 +12,8 @@ import java.util.List;
 @Service
 public class AtestDemoService implements DemoService{
     @Override
-    public List<String> getNameList() {
-        return Collections.singletonList("A");
+    public List<Integer> getNameList() {
+        return Collections.singletonList(DemoNameEnum.A.getCode());
     }
 
     @Override

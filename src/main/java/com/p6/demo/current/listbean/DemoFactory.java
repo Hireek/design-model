@@ -14,8 +14,13 @@ public class DemoFactory {
     @Autowired
     private List<DemoService> demoServiceList;
     
-    public void execute(String name) {
-        demoServiceList.stream().filter(demoService -> demoService.getNameList().contains(name)).findFirst().get()
-                .execute(name);
+    public void execute(int code) {
+        DemoNameEnum nameEnum = DemoNameEnum.getEnum(code);
+        if (null == nameEnum) {
+            return;
+        } else {
+            demoServiceList.stream().filter(demoService -> demoService.getNameList().contains(nameEnum.getCode())).findFirst().get()
+                    .execute(nameEnum.getName());
+        }
     }
 }

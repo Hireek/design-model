@@ -7,6 +7,6 @@ import java.util.List;
  * @Date: 2020/12/11 2:23 下午
  */
 public interface DemoService {
-    List<String> getNameList();
+    List<Integer> getNameList();
     void execute(String name);
 }
