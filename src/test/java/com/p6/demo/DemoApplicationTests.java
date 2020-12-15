@@ -1,7 +1,7 @@
 package com.p6.demo;
 
-import com.p6.demo.current.listbean.DemoFactory;
-import com.p6.demo.current.listbean.DemoNameEnum;
+import com.p6.demo.current.factory.DemoFactory;
+import com.p6.demo.current.factory.DemoNameEnum;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 

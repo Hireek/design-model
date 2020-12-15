@@ -1,4 +1,4 @@
-package com.p6.demo.current.listbean;
+package com.p6.demo.current.factory;
 
 /**
  * @Author: Chord

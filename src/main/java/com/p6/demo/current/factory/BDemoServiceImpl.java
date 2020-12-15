@@ -1,4 +1,4 @@
-package com.p6.demo.current.listbean;
+package com.p6.demo.current.factory;
 
 import org.springframework.stereotype.Service;
 
@@ -10,14 +10,14 @@ import java.util.List;
  * @Date: 2020/12/11 2:25 下午
  */
 @Service
-public class BtestDemoService implements DemoService {
+public class BDemoServiceImpl extends AbstractDefaultDemoServiceImpl{
     @Override
     public List<Integer> getNameList() {
         return Collections.singletonList(DemoNameEnum.B.getCode());
     }
 
     @Override
-    public void execute(String name) {
+    public void executeBussiness(String name) {
         System.out.println(name);
     }
 }
