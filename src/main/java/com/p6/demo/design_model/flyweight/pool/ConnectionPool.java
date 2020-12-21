@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.util.Vector;
 
 /**
- * @author 徐恩晗 xshlxx@126.com
+ * @author 扫地僧 xshlxx@126.com
  * @since 2020/12/10
  */
 public class ConnectionPool {

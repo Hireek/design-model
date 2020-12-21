@@ -10,7 +10,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
- * @author 徐恩晗 xshlxx@126.com
+ * @author 扫地僧 xshlxx@126.com
  * @since 2020/12/1
  */
 public class CglibMeiPo implements MethodInterceptor {

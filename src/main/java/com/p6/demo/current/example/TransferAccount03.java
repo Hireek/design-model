@@ -3,16 +3,16 @@ package com.p6.demo.current.example;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.SneakyThrows;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * @author 徐恩晗 xshlxx@126.com
+ * @author 扫地僧 xshlxx@126.com
  * @since 2020/12/20
  */
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 public class TransferAccount03 implements Runnable {
 
@@ -21,18 +21,14 @@ public class TransferAccount03 implements Runnable {
 
     private int amount;
 
-    Lock fromLock = new ReentrantLock();
 
-    Lock toLock = new ReentrantLock();
-
-
+    @SneakyThrows
     @Override
     public void run() {
 
         Account left = null;
         Account right = null;
 
-        // 是不是有什么算法能证明说: 先申明的对象的hashCode一定比后声明的要大？
         if (fromAccount.hashCode() > toAccount.hashCode()) {
 
             left = toAccount;

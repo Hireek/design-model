@@ -1,7 +1,7 @@
 package com.p6.demo.design_model.composite.general.demo.transparent;
 
 /**
- * @author 徐恩晗 xshlxx@126.com
+ * @author 扫地僧 xshlxx@126.com
  * @since 2020/12/15
  */
 public abstract class CourseComponent {
